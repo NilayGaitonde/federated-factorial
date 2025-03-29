@@ -29,7 +29,6 @@ def worker():
                 sender.send_string(str(local_result))
                 break
             local_result *= int(task)
-            time.sleep(0.1)
         except ValueError:
             print(f"Worker {worker_id} received invalid task: {task}")
     print(f"Worker {worker_id} OUT OF LOOP")
